@@ -1,0 +1,8 @@
+# Backend
+venv/
+taskflow.db
+*.pyc
+__pycache__/
+
+# Frontend
+node_modules/

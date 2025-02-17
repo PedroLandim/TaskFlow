@@ -1,0 +1,112 @@
+/* TarefaList.css */
+.tarefa-list-container {
+    width: 90%; /* Ocupa 90% da largura da tela */
+    max-width: 1200px; /* Largura máxima */
+    max-height: 800px; /* Altura máxima fixa */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    position: fixed;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+}
+
+.tarefa-list-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra no texto */
+    text-align: center;
+}
+
+.tarefa-list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarefa-list-container li {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarefa-list-container li:hover {
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.tarefa-list-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.tarefa-list-container p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin: 5px 0;
+}
+
+/* Estilo do campo de filtro */
+.filtro-section {
+    margin-bottom: 20px;
+}
+
+.filtro-section input {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff; /* Texto branco */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filtro-section input:focus {
+    border-color: #6200ea; /* Roxo */
+    box-shadow: 0 0 8px rgba(98, 0, 234, 0.3); /* Sombra roxa */
+}
+
+.filtro-section input:hover {
+    border-color: #6200ea; /* Roxo ao passar o mouse */
+}
+
+/* Estilo do botão "Marcar como Concluída" */
+.tarefa-list-container button {
+    background-color: #6200ea; /* Roxo */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tarefa-list-container button:hover {
+    background-color: #3700b3; /* Roxo mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de levantar */
+}
+
+.tarefa-list-container button:active {
+    transform: translateY(0); /* Efeito de pressionar */
+}
+
+/* Estilo para o status da tarefa */
+.tarefa-list-container .status-andamento {
+    color: #ffeb3b; /* Amarelo para tarefas em andamento */
+}
+
+.tarefa-list-container .status-concluido {
+    color: #4caf50; /* Verde para tarefas concluídas */
+}

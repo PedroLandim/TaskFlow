@@ -1,0 +1,208 @@
+/* Home.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #080646, #1a1a6e); /* Gradiente azul escuro */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    max-width: 600px;
+    width: 100%;
+    position: absolute;
+    top: 2%; /* Ajuste a porcentagem conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra no texto */
+}
+
+.home-container p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+.home-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois botões lado a lado */
+    gap: 20px; /* Espaço entre os botões */
+    margin-bottom: 20px; /* Espaço abaixo dos botões */
+}
+
+.home-button {
+    text-decoration: none;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #6200ea, #3700b3); /* Gradiente roxo */
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra nos botões */
+    text-align: center;
+}
+
+.home-button.full-width {
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
+}
+
+.home-button:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    background: linear-gradient(135deg, #3700b3, #6200ea); /* Gradiente invertido no hover */
+}
+
+/* Estilos para a lista de tarefas pendentes */
+.tarefas-pendentes-container {
+    width: 90%; /* Ocupa 90% da largura da tela */
+    max-width: 1200px; /* Largura máxima */
+    max-height: 450px; /* Altura máxima fixa */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 25px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    position: fixed;
+    top: 350px; /* Posiciona abaixo do home-container */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 70px; /* Espaço entre o home-container e a lista */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+}
+
+/* Título da lista */
+.tarefas-pendentes-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra no texto */
+    text-align: center;
+}
+
+/* Lista de tarefas */
+.tarefas-pendentes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Item da tarefa */
+.tarefa-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os elementos internos */
+    position: relative; /* Adicionado para posicionar o botão */
+}
+
+
+.tarefa-item:hover {
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Título da tarefa */
+.tarefa-item h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #fff;
+    text-align: center; /* Centraliza o título */
+}
+
+/* Descrição da tarefa */
+.tarefa-item .descricao {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 10px 0;
+    text-align: justify; /* Justifica o texto da descrição */
+}
+
+/* Responsável da tarefa */
+.tarefa-item .responsavel {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    text-align: right; /* Alinha o responsável à direita */
+    margin-top: auto; /* Coloca o responsável na parte inferior */
+}
+
+.usuario-nome{
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilo do botão "Iniciar Tarefa" */
+.iniciar-tarefa-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6200ea, #3700b3); /* Gradiente verde */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra nos botões */
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    bottom: 10px; /* Distância do fundo */
+    right: 10px; /* Distância da direita */
+}
+
+.iniciar-tarefa-button:hover {
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    background: linear-gradient(135deg, #3700b3, #6200ea); /* Gradiente verde mais escuro no hover */
+}
+
+/* Feedback visual ao clicar */
+.iniciar-tarefa-button:active {
+    transform: translateY(0); /* Remove o efeito de levantar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Mantém a sombra */
+}
+
+.export-button {
+    background-color: #200e60;
+    color: white;
+    padding: 5px 10px; /* Diminui o padding para reduzir o tamanho do botão */
+    border: none;
+    cursor: pointer;
+    font-size: 14px; /* Diminui o tamanho da fonte */
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.export-button .icon {
+    width: 20px; /* Define a largura da imagem */
+    height: 20px; /* Define a altura da imagem */
+    margin-right: 5px; /* Espaço entre a imagem e o texto */
+    vertical-align: middle; /* Alinha verticalmente ao meio */
+}
+
+.export-button:hover {
+    background-color: #2e0073;
+}

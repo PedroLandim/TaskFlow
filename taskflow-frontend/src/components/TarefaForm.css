@@ -1,0 +1,131 @@
+/* TarefaForm.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #080646, #1a1a6e); /* Gradiente azul escuro */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container do formulário */
+.tarefa-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Título do formulário */
+.tarefa-form h2 {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-size: 2rem;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra no texto */
+}
+
+/* Estilos específicos para os inputs */
+.tarefa-form input,
+.tarefa-form select {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff; /* Texto branco */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Placeholder estilizado */
+.tarefa-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder semi-transparente */
+    font-style: italic;
+}
+
+/* Efeito ao focar nos inputs */
+.tarefa-form input:focus,
+.tarefa-form select:focus {
+    border-color: #6200ea; /* Roxo */
+    box-shadow: 0 0 8px rgba(98, 0, 234, 0.3); /* Sombra roxa */
+}
+
+/* Efeito hover nos inputs */
+.tarefa-form input:hover,
+.tarefa-form select:hover {
+    border-color: #6200ea; /* Roxo ao passar o mouse */
+}
+
+/* Estilo para o dropdown (select) */
+.tarefa-form select {
+    appearance: none; /* Remove o estilo padrão do select */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+}
+
+/* Botão de voltar */
+.back-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #2ecc71, #3498db); /* Gradiente vermelho */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra nos botões */
+    border: none;
+    cursor: pointer;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+.back-button:hover {
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    background: linear-gradient(135deg, #27ae60, #2980b9); /* Gradiente invertido no hover */
+}
+
+/* Botão de registro */
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6200ea, #3700b3); /* Gradiente roxo */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra nos botões */
+}
+
+.register-button:hover {
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    background: linear-gradient(135deg, #3700b3, #6200ea); /* Gradiente invertido no hover */
+}
+
+/* Estilo para as opções do select */
+.tarefa-form select option {
+    background-color: #333; /* Fundo escuro para as opções */
+    color: #fff; /* Texto branco */
+}
+

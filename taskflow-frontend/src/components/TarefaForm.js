@@ -11,7 +11,7 @@ const TarefaForm = () => {
 
     useEffect(() => {
         const fetchUsuarios = async () => {
-            const response = await axios.get('https://taskflow-93vn.onrender.com//usuarios/');
+            const response = await axios.get('https://taskflow-93vn.onrender.com/usuarios/');
             setUsuarios(response.data);
         };
         fetchUsuarios();
@@ -20,7 +20,7 @@ const TarefaForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://taskflow-93vn.onrender.com//tarefas/', {
+            const response = await axios.post('https://taskflow-93vn.onrender.com/tarefas/', {
                 titulo,
                 descricao,
                 usuario_id: usuarioId

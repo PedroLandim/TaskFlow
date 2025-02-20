@@ -12,3 +12,4 @@ class UsuarioResponse(UsuarioBase):
 
     class Config:
         orm_mode = True
+

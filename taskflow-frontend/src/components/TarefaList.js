@@ -9,7 +9,7 @@ const TarefaList = () => {
 
     const fetchTarefasEmAndamento = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/tarefas/');
+            const response = await axios.get('https://taskflow-93vn.onrender.com//tarefas/');
             const tarefas = response.data;
             const emAndamento = tarefas.filter(tarefa => tarefa.status === "Em Andamento");
             setTarefasEmAndamento(emAndamento);
@@ -21,7 +21,7 @@ const TarefaList = () => {
 
     const concluirTarefa = async (tarefaId) => {
         try {
-            await axios.put(`http://localhost:8000/tarefas/${tarefaId}/`, { status: "Concluído" });
+            await axios.put(`https://taskflow-93vn.onrender.com//tarefas/${tarefaId}/`, { status: "Concluído" });
             setTarefasEmAndamento(tarefasEmAndamento.filter(tarefa => tarefa.id !== tarefaId));
         } catch (error) {
             console.error("Erro ao concluir tarefa:", error.response || error.message);

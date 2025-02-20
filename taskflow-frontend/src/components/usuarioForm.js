@@ -10,7 +10,7 @@ const UsuarioForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/usuarios/', { nome, email });
+            const response = await axios.post('https://taskflow-93vn.onrender.com//usuarios/', { nome, email });
             setSuccessMessage('Usuário cadastrado com sucesso!'); 
 
            

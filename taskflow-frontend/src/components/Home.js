@@ -9,7 +9,7 @@ const Home = () => {
 
     const fetchTarefasPendentes = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/tarefas/');
+            const response = await axios.get('https://taskflow-93vn.onrender.com//tarefas/');
             const tarefas = response.data;
             const pendentes = tarefas.filter(tarefa => tarefa.status === "Pendente");
             setTarefasPendentes(pendentes);
@@ -21,7 +21,7 @@ const Home = () => {
 
     const iniciarTarefa = async (tarefaId) => {
         try {
-            await axios.put(`http://localhost:8000/tarefas/${tarefaId}/`, { status: "Em Andamento" });
+            await axios.put(`https://taskflow-93vn.onrender.com//tarefas/${tarefaId}/`, { status: "Em Andamento" });
 
             setTarefasPendentes(tarefasPendentes.filter(tarefa => tarefa.id !== tarefaId));
 
@@ -32,7 +32,7 @@ const Home = () => {
 
     const exportarTarefas = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/tarefas/exportar-tarefas/', {
+            const response = await axios.get('https://taskflow-93vn.onrender.com//tarefas/exportar-tarefas/', {
                 responseType: 'blob',  // Tipo de resposta 'blob' para permitir o download do arquivo
             });
     

@@ -6,7 +6,7 @@ const UsuarioList = () => {
 
     useEffect(() => {
         const fetchUsuarios = async () => {
-            const response = await axios.get('http://localhost:8000/usuarios/');
+            const response = await axios.get('https://taskflow-93vn.onrender.com//usuarios/');
             setUsuarios(response.data);
         };
         fetchUsuarios();
